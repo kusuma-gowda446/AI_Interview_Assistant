@@ -14,11 +14,14 @@ except(Keyerror , Filenotfounderror):
   st.error("GROQ_API_KEY is missing ")
   st.stop()
 
-role = st.selection("Select Job Role:,[
-                    "Python Developer",
-                    "Java Developer",
-                    "Data Analyst",
-                    "machine Learning",
-                    "Software Engineer",
-                    "HR Executive"
-                    ])
+role = st.selectbox(
+    "Select Job Role:",
+    [
+        "Python Developer",
+        "Java Developer",
+        "Data Analyst",
+        "Machine Learning",
+        "Software Engineer",
+        "HR Executive"
+    ]
+)
