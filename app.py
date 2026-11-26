@@ -6,3 +6,10 @@ st.title('AI Interview Assistant')
 st.caption('practice interviews with AI ')
 st.caption('Lunched by : Kusuma Gowda ')
 st.write("Department of AI & DS")
+
+try:
+  client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+  st.write("API connection sucessful")
+except(Keyerror , Filenotfounderror):
+  st.error("GROQ_API_KEY is missing ")
+  st.stop()
